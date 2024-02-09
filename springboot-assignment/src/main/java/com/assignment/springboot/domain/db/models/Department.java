@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "department")
 @AllArgsConstructor
@@ -15,8 +17,4 @@ import lombok.Setter;
 public class Department extends BaseModel{
     @Column(name = "name")
     private String name;
-
-    @ManyToOne
-    @JoinColumn(name = "emp_id")
-    private Employee employee;
 }
