@@ -6,18 +6,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
-@Table(name = "employee")
+@Table(name = "department")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Employee extends BaseModel {
+public class Department extends BaseModel{
     @Column(name = "name")
     private String name;
-
-    @ManyToOne
-    @JoinColumn(name = "department_id")
-    private Department department;
-
 }
